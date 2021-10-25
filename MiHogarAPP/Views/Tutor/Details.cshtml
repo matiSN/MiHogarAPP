@@ -1,0 +1,90 @@
+﻿@model ConexionMiHogarAPP.Models.Tutor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles del tutor</h2>
+
+<div>
+    <h4>Tutor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.rut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clave)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eliminado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eliminado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaEliminado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaEliminado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comuna.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comuna.descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

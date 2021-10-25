@@ -1,0 +1,166 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /* Header/Blog Title */
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: white;
+        }
+
+            .header h1 {
+                font-size: 50px;
+            }
+
+        /* Style the top navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            padding: 10px 5px;
+        }
+
+            /* Style the topnav links */
+            .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                /* Change color on hover */
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+
+        /* Fake image */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .fakeimg1 {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>Sobre Nosotros</h2>
+                <h4>Pequeña descripcion de nosotros.</h4>
+                <div class="fakeimg1" style="height:200px;"><img src="~/Images/ayuda.jpg" width="300px" height="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="~/Images/anciana.jpg" width="300px" height="150"></div>
+                <p>
+                    Somos una empresa dedicada a cuidar adultos mayores,por un precio razonable podemos cuidar y darle el cariño que ellos merecen.
+                    Nos alegramos por la confianza que depositan día a día en nosotros, y esta pagina web demuestra
+                    lo interesados que estamos en ofrecer un servicio eficiente y de calidad a nuestros clientes
+                    Contamos con un gran número de colaboradores capacitados para ofrecer el mejor servicio del mercado,
+                    los cuales cuentan con una gran experiencia en el cuidado de adultos mayores
+                </p>
+            </div>
+            <div class="card">
+                <h2>Como Pustular?</h2>
+                <h4>Paso a paso</h4>
+                <div class="fakeimg" style="height:200px;"><img src="~/Images/postular.jpg" width="800px" height="150"></div>
+
+                <p>Para poder acceder a la opcion de poder postular a tu paciente en nuestro establecimiento, deberas registrarte y luego logearte como tutor para tener acceso a estos procesos.</p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>Ubicacion</h2>
+                <div class="fakeimg" style="height:200px;"><a href="https://www.google.cl/maps"><img src="~/Images/google maps.jpg" width="220px" height="150"></a></div>
+                <p>
+                    Direccion: El establecimiento se encuentra ubicado en la quebrada 4162 condominio ciudad del este, puente alto.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Precios Bases</h3>
+                <p>Valente     : $550.000 mensual</p>
+                <P>Semi-Valente: $600.000 mensual</P>
+                <p>Postrado    : $650.000 mensual</p>
+                <p>(Los precios pueden variar dependiendo de los cuidados que necesiten y que patologías tengan)</p>
+                <br>
+
+
+            </div>
+            <div class="card">
+                <h3>Siguenos en nuestras Redes Sociales</h3>
+                <p>
+                    <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjM0NTM2MTQ1LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D"><img src="~/Images/facebook.png" width="100px" height="100"></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img src="~/Images/gmail.png" width="120px" height="100"></a>
+                    <a href="https://twitter.com/?lang=es"><img src="~/Images/twitter.png" width="100px" height="100"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+
+
+</body>
+</html>

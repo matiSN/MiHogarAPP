@@ -1,0 +1,229 @@
+﻿@model ConexionMiHogarAPP.Models.FichaClinica
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Estas seguro que deseas eliminar este registro?</h3>
+<div>
+    <h4>FichaClinica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.fecha)*@
+            Fecha de Ingreso
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.aseoBucal)*@
+            Aseo Bucal
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aseoBucal)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.aseoGenital)*@
+            Aseo Genital
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aseoGenital)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.aseoCavidades)*@
+            Aseo Cavidades
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aseoCavidades)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.hidratacion)*@
+            Hidratacion
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hidratacion)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.bano)*@
+            Baño
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bano)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.desposiciones)*@
+            Deposiciones
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.desposiciones)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.tempAxilar)*@
+            Temperatura Axilar
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tempAxilar)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.frecuenciaResp)*@
+            Frecuencia Respiratoria
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.frecuenciaResp)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.cuidadoUnaPelo)*@
+            Cuidado Uña y Pelo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cuidadoUnaPelo)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.daoc)*@
+            D.A.O.C
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.daoc)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.pulso)*@
+            Pulso
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pulso)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.presionArterial)*@
+            Presion Arterial
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.presionArterial)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.saturacion)*@
+            Saturacion
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.saturacion)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.diuresis)*@
+            Diuresis
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diuresis)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.vomitos)*@
+            Vomitos
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vomitos)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.otros)*@
+            Otros
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.otros)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.observaciones)*@
+            Observaciones
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.observaciones)
+        </dd>
+
+        <!--<dt>
+        @Html.DisplayNameFor(model => model.eliminado)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.eliminado)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.fechaEliminado)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.fechaEliminado)
+    </dd>-->
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Pacientes.rut)*@
+            Rut Paciente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pacientes.rut)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.TipoIngreso.descripcion)*@
+            Tipo de Ingreso
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoIngreso.descripcion)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Trabajador.rut)*@
+            Rut Trabajador
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trabajador.rut)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista de fichas Clinicas", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,64 @@
+﻿@model ConexionMiHogarAPP.Models.Visitas
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar visita</h2>
+
+<h3>Estas seguro que quieres eliminar esto?</h3>
+<div>
+    <h4>Visitas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pacientes.rut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pacientes.rut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trabajador.rut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trabajador.rut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tutor.rut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tutor.rut)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,173 @@
+﻿@model IEnumerable<ConexionMiHogarAPP.Models.FichaClinica>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Fichas Clinicas</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table" style="border-color:black;text-align:center">
+    <tr>
+
+        <th>
+            RUT TRABAJADOR
+        </th>
+        <th>
+            RUT DEL PACIENTE 
+        </th>
+        @*<th>
+            ASEO BUCAL
+        </th>
+        <th>
+            ASEO GENITAL 
+        </th>
+        <th>
+            ASEO CAVIDADES
+        </th>
+        <th>
+            HIDRATACION
+        </th>
+        <th>
+            BAÑO
+        </th>
+        <th>
+            DEPOSICIONES
+        </th>
+        <th>
+            TEMPERATURA AXILAR
+        </th>
+        <th>
+            FRECUENCIA RESPIRATORIA
+        </th>
+        <th>
+            CUIDADO UÑA-PELO
+        </th>
+        <th>
+            D.A.O.C
+        </th>
+        <th>
+            PULSO
+        </th>
+        <th>
+            PRESION ARTERIAL
+        </th>
+        <th>
+            SATURACION
+        </th>
+        <th>
+            DIURESIS
+        </th>
+        <th>
+            VOMITOS
+        </th>
+        <th>
+            OTROS
+        </th>
+        <th>
+            OBSERVACIONES
+        </th>
+        <th>
+            TIPO DE INGRESO
+        </th>*@
+        <th>
+            FECHA DE INGRESO
+        </th>
+
+        <!-- <th>
+         @Html.DisplayNameFor(model => model.eliminado)
+     </th>
+     <th>
+         @Html.DisplayNameFor(model => model.fechaEliminado)
+     </th>-->
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Trabajador.rut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pacientes.rut)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.aseoBucal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.aseoGenital)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.aseoCavidades)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hidratacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bano)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.desposiciones)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tempAxilar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.frecuenciaResp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cuidadoUnaPelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.daoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pulso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.presionArterial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.saturacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diuresis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vomitos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.otros)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.observaciones)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoIngreso.descripcion)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha)
+        </td>
+
+        <!--<td>
+        @Html.DisplayFor(modelItem => item.eliminado)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fechaEliminado)
+    </td>-->
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.id })
+        </td>
+    </tr>
+    }
+
+</table>
+
+
+
+
+

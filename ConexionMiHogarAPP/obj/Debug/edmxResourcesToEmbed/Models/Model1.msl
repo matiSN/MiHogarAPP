@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MihogarAPPModelStoreContainer" CdmEntityContainer="MihogarAPPEntities">
+    <EntitySetMapping Name="Cargo">
+      <EntityTypeMapping TypeName="MihogarAPPModel.Cargo">
+        <MappingFragment StoreEntitySet="Cargo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="fechaEliminado" ColumnName="fechaEliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Certificados">
+      <EntityTypeMapping TypeName="MihogarAPPModel.Certificados">
+        <MappingFragment StoreEntitySet="Certificados">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="idTrabajador" ColumnName="idTrabajador" />
+          <ScalarProperty Name="archivo" ColumnName="archivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comuna">
+      <EntityTypeMapping TypeName="MihogarAPPModel.Comuna">
+        <MappingFragment StoreEntitySet="Comuna">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="fechaEliminado" ColumnName="fechaEliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FichaClinica">
+      <EntityTypeMapping TypeName="MihogarAPPModel.FichaClinica">
+        <MappingFragment StoreEntitySet="FichaClinica">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
+          <ScalarProperty Name="idTipoIngreso" ColumnName="idTipoIngreso" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="aseoBucal" ColumnName="aseoBucal" />
+          <ScalarProperty Name="aseoGenital" ColumnName="aseoGenital" />
+          <ScalarProperty Name="aseoCavidades" ColumnName="aseoCavidades" />
+          <ScalarProperty Name="hidratacion" ColumnName="hidratacion" />
+          <ScalarProperty Name="bano" ColumnName="bano" />
+          <ScalarProperty Name="desposiciones" ColumnName="desposiciones" />
+          <ScalarProperty Name="tempAxilar" ColumnName="tempAxilar" />
+          <ScalarProperty Name="frecuenciaResp" ColumnName="frecuenciaResp" />
+          <ScalarProperty Name="cuidadoUnaPelo" ColumnName="cuidadoUnaPelo" />
+          <ScalarProperty Name="daoc" ColumnName="daoc" />
+          <ScalarProperty Name="pulso" ColumnName="pulso" />
+          <ScalarProperty Name="presionArterial" ColumnName="presionArterial" />
+          <ScalarProperty Name="saturacion" ColumnName="saturacion" />
+          <ScalarProperty Name="diuresis" ColumnName="diuresis" />
+          <ScalarProperty Name="vomitos" ColumnName="vomitos" />
+          <ScalarProperty Name="otros" ColumnName="otros" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="idTrabajador" ColumnName="idTrabajador" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="fechaEliminado" ColumnName="fechaEliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormaPago">
+      <EntityTypeMapping TypeName="MihogarAPPModel.FormaPago">
+        <MappingFragment StoreEntitySet="FormaPago">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="fechaEliminado" ColumnName="fechaEliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImagenesPacientes">
+      <EntityTypeMapping TypeName="MihogarAPPModel.ImagenesPacientes">
+        <MappingFragment StoreEntitySet="ImagenesPacientes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
+          <ScalarProperty Name="url" ColumnName="url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImagenesTrabajador">
+      <EntityTypeMapping TypeName="MihogarAPPModel.ImagenesTrabajador">
+        <MappingFragment StoreEntitySet="ImagenesTrabajador">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idTrabajador" ColumnName="idTrabajador" />
+          <ScalarProperty Name="url" ColumnName="url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pacientes">
+      <EntityTypeMapping TypeName="MihogarAPPModel.Pacientes">
+        <MappingFragment StoreEntitySet="Pacientes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="rut" ColumnName="rut" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="enfermedades" ColumnName="enfermedades" />
+          <ScalarProperty Name="cobertura" ColumnName="cobertura" />
+          <ScalarProperty Name="medicamentos" ColumnName="medicamentos" />
+          <ScalarProperty Name="idTutor" ColumnName="idTutor" />
+          <ScalarProperty Name="difunto" ColumnName="difunto" />
+          <ScalarProperty Name="dependencia" ColumnName="dependencia" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="fechaEliminado" ColumnName="fechaEliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pagos">
+      <EntityTypeMapping TypeName="MihogarAPPModel.Pagos">
+        <MappingFragment StoreEntitySet="Pagos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idTutor" ColumnName="idTutor" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idFormaPago" ColumnName="idFormaPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Postulaciones">
+      <EntityTypeMapping TypeName="MihogarAPPModel.Postulaciones">
+        <MappingFragment StoreEntitySet="Postulaciones">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idTutor" ColumnName="idTutor" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="MihogarAPPModel.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombreProducto" ColumnName="nombreProducto" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
+          <ScalarProperty Name="idTipoProducto" ColumnName="idTipoProducto" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idTrabajador" ColumnName="idTrabajador" />
+          <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
+          <ScalarProperty Name="idTutor" ColumnName="idTutor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Region">
+      <EntityTypeMapping TypeName="MihogarAPPModel.Region">
+        <MappingFragment StoreEntitySet="Region">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="fechaEliminado" ColumnName="fechaEliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoIngreso">
+      <EntityTypeMapping TypeName="MihogarAPPModel.TipoIngreso">
+        <MappingFragment StoreEntitySet="TipoIngreso">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="fechaEliminado" ColumnName="fechaEliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoProducto">
+      <EntityTypeMapping TypeName="MihogarAPPModel.TipoProducto">
+        <MappingFragment StoreEntitySet="TipoProducto">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="fechaEliminado" ColumnName="fechaEliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trabajador">
+      <EntityTypeMapping TypeName="MihogarAPPModel.Trabajador">
+        <MappingFragment StoreEntitySet="Trabajador">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="rut" ColumnName="rut" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idCargo" ColumnName="idCargo" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="idComuna" ColumnName="idComuna" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="fechaEliminado" ColumnName="fechaEliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tutor">
+      <EntityTypeMapping TypeName="MihogarAPPModel.Tutor">
+        <MappingFragment StoreEntitySet="Tutor">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="rut" ColumnName="rut" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="idComuna" ColumnName="idComuna" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="fechaEliminado" ColumnName="fechaEliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Visitas">
+      <EntityTypeMapping TypeName="MihogarAPPModel.Visitas">
+        <MappingFragment StoreEntitySet="Visitas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idTutor" ColumnName="idTutor" />
+          <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+          <ScalarProperty Name="idTrabajador" ColumnName="idTrabajador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HorarioTrabajador">
+      <EntityTypeMapping TypeName="MihogarAPPModel.HorarioTrabajador">
+        <MappingFragment StoreEntitySet="HorarioTrabajador">
+          <ScalarProperty Name="horaSalida" ColumnName="horaSalida" />
+          <ScalarProperty Name="horaEntrada" ColumnName="horaEntrada" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idTrabajador" ColumnName="idTrabajador" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

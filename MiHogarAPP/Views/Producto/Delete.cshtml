@@ -1,0 +1,97 @@
+﻿@model ConexionMiHogarAPP.Models.Producto
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar Producto</h2>
+
+<h3>¿Estás seguro de que quieres eliminar esto?</h3>
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.nombreProducto)*@
+            Nombre Producto
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreProducto)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.descripcion)*@
+            Descripcion Producto
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.cantidad)*@
+            Cantidad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.fechaIngreso)*@
+            Fecha de Ingreso
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaIngreso)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Pacientes.rut)*@
+            Rut del Paciente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pacientes.rut)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.TipoProducto.descripcion)*@
+            Tipo de Producto
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoProducto.descripcion)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Trabajador.rut)*@
+            Rut Trabajador
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trabajador.rut)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Tutor.rut)*@
+            Rut Tutor
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tutor.rut)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver al Inicio", "Index")
+        </div>
+    }
+</div>

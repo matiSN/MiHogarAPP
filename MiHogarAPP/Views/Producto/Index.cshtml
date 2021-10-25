@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ConexionMiHogarAPP.Models.Producto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Inicio Productos</h2>
+
+<p>
+    @Html.ActionLink("Ingresar Nuevo Producto", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Nombre del Producto
+        </th>
+        <th>
+            Descripcion
+        </th>
+        <th>
+            Cantidad
+        </th>
+        <th>
+            Fecha de Ingreso
+        </th>
+        <th>
+            Rut Paciente
+        </th>
+        <th>
+            Tipo de Producto
+        </th>
+        <th>
+            Rut Trabajador
+        </th>
+        <th>
+            Rut Tutor
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreProducto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaIngreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pacientes.rut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoProducto.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Trabajador.rut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tutor.rut)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

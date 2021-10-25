@@ -1,0 +1,58 @@
+﻿@model ConexionMiHogarAPP.Models.Visitas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles de la visita</h2>
+
+<div>
+    <h4>Visitas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pacientes.rut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pacientes.rut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trabajador.rut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trabajador.rut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tutor.rut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tutor.rut)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

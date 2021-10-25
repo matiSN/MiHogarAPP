@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fab2af7ba6204959ad62c06cf1834899" Name="Diagram1">
+        <EntityTypeShape EntityType="MihogarAPPModel.Cargo" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.Certificados" Width="1.5" PointX="7.5" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.Comuna" Width="1.5" PointX="3" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.FichaClinica" Width="1.5" PointX="9.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.FormaPago" Width="1.5" PointX="8.25" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.ImagenesPacientes" Width="1.5" PointX="9.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.ImagenesTrabajador" Width="1.5" PointX="7.5" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.Pacientes" Width="1.5" PointX="7.5" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.Pagos" Width="1.5" PointX="10.5" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.Postulaciones" Width="1.5" PointX="7.5" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.Producto" Width="1.5" PointX="12.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.Region" Width="1.5" PointX="0.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.TipoIngreso" Width="1.5" PointX="7.5" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.TipoProducto" Width="1.5" PointX="10.5" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.Trabajador" Width="1.5" PointX="5.25" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.Tutor" Width="1.5" PointX="5.25" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="MihogarAPPModel.Visitas" Width="1.5" PointX="12.75" PointY="22.875" IsExpanded="true" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Trabajador_Cargo" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Certificados_Trabajador" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Comuna_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Trabajador_Comuna" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Tutor_Comuna" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_FichaClinica_Pacientes" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_FichaClinica_TipoIngreso" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_FichaClinica_Trabajador" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Pagos_FormaPago" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_ImagenesPacientes_Pacientes" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_ImagenesTrabajador_Trabajador" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Pacientes_Tutor" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Producto_Pacientes" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Visitas_Pacientes" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Pagos_Tutor" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Postulaciones_Tutor" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Producto_TipoProducto" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Producto_Trabajador" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Producto_Tutor" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Visitas_Trabajador" ManuallyRouted="false" />
+        <AssociationConnector Association="MihogarAPPModel.FK_Visitas_Tutor" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MihogarAPPModel.HorarioTrabajador" Width="1.5" PointX="7.5" PointY="24.625" />
+        <AssociationConnector Association="MihogarAPPModel.FK_HorarioTrabajador_Trabajador" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

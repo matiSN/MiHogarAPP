@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Portal Administrativo</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i>Nuestro Señor De Mayo</i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="~/Home">Inicio</a>
+                    <a class="nav-link" href="~/Cargo">Cargos</a>
+                    <a class="nav-link" href="~/Certificados">Certificados</a>
+                    <a class="nav-link" href="~/Comuna">Comuna</a>
+                    <a class="nav-link" href="~/FichaClinica">FichasClinicas</a>
+                    <a class="nav-link" href="~/FormaPago">FormaPago</a>
+                    <a class="nav-link" href="~/ImagenesPacientes">ImagenesPacientes </a>
+                    <a class="nav-link" href="~/ImagenesTrabajador">ImagenesTrabajadores </a>
+                    <a class="nav-link" href="~/Pacientes">Pacientes </a>
+                    <a class="nav-link" href="~/Pagos">Pagos </a>
+                    <a class="nav-link" href="~/Postulaciones">Postulaciones </a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="~/Producto">Productos </a>
+                    <a class="nav-link" href="~/Region">Regiones </a>
+                    <a class="nav-link" href="~/TipoIngreso">Tipo de Ingreso </a>
+                    <a class="nav-link" href="~/TipoProducto">Tipo Producto </a>
+                    <a class="nav-link" href="~/Trabajador">Trabajadores </a>
+                    <a class="nav-link" href="~/Tutor">Tutores </a>
+                    <a class="nav-link" href="~/Visitas">Visitas </a>
+                    <a class="nav-link" href="~/HorarioTrabajador">Horario Trabajador </a>
+                    <a class="nav-link" href="~/Login">Iniciar Sesion </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section>
+        @RenderBody()
+    </section>
+    <footer></footer>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿@model ConexionMiHogarAPP.Models.Tutor
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar tutor</h2>
+
+<h3>Estas seguro que quieres eliminar esto?</h3>
+<div>
+    <h4>Tutor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.rut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clave)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eliminado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eliminado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaEliminado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaEliminado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comuna.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comuna.descripcion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

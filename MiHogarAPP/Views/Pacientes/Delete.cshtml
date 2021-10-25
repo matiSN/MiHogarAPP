@@ -1,0 +1,115 @@
+﻿@model ConexionMiHogarAPP.Models.Pacientes
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar Paciente</h2>
+
+<h3>¿Estás seguro de que quieres eliminar esto?</h3>
+<div>
+    <h4>Pacientes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.rut)*@
+            Rut Paciente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rut)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.nombre)*@
+            Nombre Completo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.edad)*@
+            Edad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edad)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.enfermedades)*@
+            Enfermedades
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.enfermedades)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.cobertura)*@
+            Cobertura
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cobertura)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.medicamentos)*@
+            Medicamentos
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medicamentos)
+        </dd>
+
+
+
+        @*<dd>
+                @Html.DisplayFor(model => model.difunto)
+                Difunto
+            </dd>*@
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.dependencia)*@
+            Dependencia
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dependencia)
+        </dd>
+
+
+        @*<dd>
+                @Html.DisplayFor(model => model.eliminado)
+            </dd>*@
+
+
+
+        @*<dd>
+                @Html.DisplayFor(model => model.fechaEliminado)
+            </dd>*@
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Tutor.rut)*@
+            Rut Tutor
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tutor.rut)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver al Inicio", "Index")
+        </div>
+    }
+</div>

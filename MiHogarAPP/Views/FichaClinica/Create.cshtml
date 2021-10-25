@@ -1,0 +1,265 @@
+﻿@model ConexionMiHogarAPP.Models.FichaClinica
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Crear</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Ficha Clinica</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.idPaciente, "idPaciente", htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Rut del Paciente
+            <div class="col-md-10">
+                @Html.DropDownList("idPaciente", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.idPaciente, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.idTipoIngreso, "idTipoIngreso", htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Tipo de Ingreso
+            <div class="col-md-10">
+                @Html.DropDownList("idTipoIngreso", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.idTipoIngreso, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.fecha, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.fecha, new { htmlAttributes = new { @class = "form-control", @required=" " } })
+                    @Html.ValidationMessageFor(model => model.fecha, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+        <br />
+
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.aseoBucal, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Aseo Bucal
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.aseoBucal)
+                    @Html.ValidationMessageFor(model => model.aseoBucal, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.aseoGenital, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Aseo Genital
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.aseoGenital)
+                    @Html.ValidationMessageFor(model => model.aseoGenital, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.aseoCavidades, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Aseo Cavidades
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.aseoCavidades)
+                    @Html.ValidationMessageFor(model => model.aseoCavidades, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.hidratacion, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Hidratacion
+            <div class="col-md-10">
+                <br />
+                Debe ingresar los ML de agua (Ej: 1 litro es igual a 1000 ml)
+                @Html.EditorFor(model => model.hidratacion, new { htmlAttributes = new { @class = "form-control", @required = " ", @onkeypress = "return (event.charCode >= 48 && event.charCode <= 57)", @maxlength = "5" } })
+                @Html.ValidationMessageFor(model => model.hidratacion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.bano, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Baño
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.bano)
+                    @Html.ValidationMessageFor(model => model.bano, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.desposiciones, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Deposiciones
+            <div class="col-md-10">
+                <select name="desposiciones">
+                    <option>Si</option>
+                    <option>no</option>
+                </select>
+
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.tempAxilar, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Temperatura Axilar
+            <div class="col-md-10">
+                <br />
+                Debe ingresar valor decimal (Ej: 37,5)
+                @Html.EditorFor(model => model.tempAxilar, new { htmlAttributes = new { @class = "form-control", @required = " ", @maxlength = "4" } })
+                @Html.ValidationMessageFor(model => model.tempAxilar, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.frecuenciaResp, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Frecuencia Respiratoria
+            <div class="col-md-10">
+                <br />
+                Debe ingresar valor por minuto (Ej:30 respiraciones por minuto es igual a 30)
+                @Html.EditorFor(model => model.frecuenciaResp, new { htmlAttributes = new { @class = "form-control", @required = " ", @onkeypress = "return (event.charCode >= 48 && event.charCode <= 57)", @maxlength = "2" } })
+                @Html.ValidationMessageFor(model => model.frecuenciaResp, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.cuidadoUnaPelo, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Cuidado de Uña y Pelo
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.cuidadoUnaPelo)
+                    @Html.ValidationMessageFor(model => model.cuidadoUnaPelo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.daoc, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            D.A.O.C
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.daoc)
+                    @Html.ValidationMessageFor(model => model.daoc, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.pulso, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Pulso
+            <div class="col-md-10">
+                <br />
+                Debe ingresar valor por minuto (Ej: 100 pulsaciones por minuto es igual a 100)
+                @Html.EditorFor(model => model.pulso, new { htmlAttributes = new { @class = "form-control", @required = " ", @onkeypress = "return (event.charCode >= 48 && event.charCode <= 57)", @maxlength = "3" } })
+                @Html.ValidationMessageFor(model => model.pulso, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.presionArterial, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Presion Arterial
+            <div class="col-md-10">
+                <br />
+                Debe ingresar valor con este formato (Ej: 120/60)
+                @Html.EditorFor(model => model.presionArterial, new { htmlAttributes = new { @class = "form-control", @required = " ", @onkeypress = "return (event.charCode >= 47 && event.charCode <= 57 )", @maxlength = "7" } })
+                @Html.ValidationMessageFor(model => model.presionArterial, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.saturacion, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Saturacion
+            <div class="col-md-10">
+                <br />
+                Debe ingresar valor del porcentaje en decimal (ej: si es 10% transformarlo a 0,10)
+                @Html.EditorFor(model => model.saturacion, new { htmlAttributes = new { @class = "form-control", @required = " ", @maxlength = "4" } })
+                @Html.ValidationMessageFor(model => model.saturacion, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.diuresis, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Diuresis
+            <div class="col-md-10">
+                <select name="diuresis">
+                    <option>++++++</option>
+                    <option>------</option>
+                </select>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.vomitos, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Vomitos
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.vomitos)
+                    @Html.ValidationMessageFor(model => model.vomitos, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.otros, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Otros
+            <div class="col-md-10">
+                <textarea name="otros" rows="3" cols="50"></textarea>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.observaciones, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Observaciones
+            <div class="col-md-10">
+                <textarea name="observaciones" rows="5" cols="50"></textarea>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.idTrabajador, "idTrabajador", htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Rut Trabajador
+            <div class="col-md-10">
+                @Html.DropDownList("idTrabajador", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.idTrabajador, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!--<div class="form-group">
+            @Html.LabelFor(model => model.eliminado, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.eliminado)
+                    @Html.ValidationMessageFor(model => model.eliminado, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.fechaEliminado, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.fechaEliminado, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.fechaEliminado, "", new { @class = "text-danger" })
+            </div>
+        </div>-->
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Crear" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Volver a la lista de Fichas Clinicas", "Index")
+</div>
+

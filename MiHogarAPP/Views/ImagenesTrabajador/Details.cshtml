@@ -1,0 +1,33 @@
+﻿@model ConexionMiHogarAPP.Models.ImagenesTrabajador
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles Imagen Trabajador</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.url)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trabajador.rut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trabajador.rut)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Volver al Inicio", "Index")
+</p>
