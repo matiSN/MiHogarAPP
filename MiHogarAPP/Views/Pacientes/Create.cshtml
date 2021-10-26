@@ -57,10 +57,9 @@
                 @*@Html.EditorFor(model => model.cobertura, new { htmlAttributes = new { @class = "form-control", @required = "" } })*@
                 @Html.ValidationMessageFor(model => model.cobertura, "", new { @class = "text-danger" })
             </div>
-            <select name="dependencia" required="">
-                <option>Auto-Valente</option>
-                <option>Semi-Valente</option>
-                <option>Postrado</option>
+            <select name="cobertura" required="">
+                <option>Isapre</option>
+                <option>Fonasa</option>
             </select>
         </div>
         <br />
